@@ -15,11 +15,17 @@ const frameOut = [
     path: "/login",
     name: "login",
     component: () => import("@/views/login/index.vue"),
+    meta: {
+      title: "Login",
+    },
   },
   {
     path: "/register",
     name: "register",
     component: () => import("@/views/register/index.vue"),
+    meta: {
+      title: "Register",
+    },
   },
 ];
 // 异常路由合集
@@ -29,6 +35,9 @@ const errorPage = [
     // path: '/:pathMatch(.*)*',
     name: "error",
     component: () => import("@/views/error/404.vue"),
+    meta: {
+      title: "404 Error Page",
+    },
   },
 ];
 

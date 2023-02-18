@@ -6,7 +6,7 @@
     </ul>
     <section class="news-content">
       <ul class="game-model">
-        <li class="news-item cursor flex-box"  @click="pageTo('blogDetails', item)" v-for="item in dataList">
+        <li class="news-item cursor flex-box" v-for="item in dataList"  @click="pageTo(item.title, item)" >
           <img v-realImg="item.image" alt="" class="news-banner" />
           <section class="news-info">
             <div class="item-title">{{ item.title }}</div>
@@ -221,7 +221,7 @@ const navChange = function (val) {
 const router = useRouter();
 const pageTo = (route, data) => {
   setLocalStorage("blogDetail", data);
-  router.push({ name: route });
+  router.push( `blog-detail/${route}` );
 };
 
 onMounted(async () => {

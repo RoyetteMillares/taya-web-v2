@@ -27,6 +27,7 @@ export default [
         name: "index",
         component: () => import("@/views/index/index.vue"),
         meta: {
+          title: "Taya",
           showSearch: false,
         },
       },
@@ -69,17 +70,20 @@ export default [
         },
       },
       {
-        path: "helpDetail",
+        path: "helpDetail/:title",
         component: () => import("@/views/help/helpDetail/index.vue"),
         name: "helpDetail",
         meta: {
-          title: [t("menu.Help"), t("help.GettingStarted")],
+          title: t("menu.Help"),
         },
       },
       {
         path: "about",
         name: "about",
         component: () => import("@/views/help/about/index.vue"),
+        meta: {
+          title: t("menu.About"),
+        }
       },
       {
         path: "commissionRules",
@@ -96,8 +100,8 @@ export default [
         },
       },
       {
-        path: "blog-detail",
-        name: "blogDetails",
+        path: "blog-detail/:title",
+        name: "blog-detail",
         component: () => import("@/views/blog/detail.vue"),
         meta: {
           title: [t("blog.BlogNews"), t("blog.BlogDetail")],
@@ -194,6 +198,7 @@ export default [
         name: "sports",
         component: () => import("@/views/sports/index.vue"),
         meta: {
+          title: 'Sports',
           showSearch: true,
         },
       },
@@ -202,6 +207,7 @@ export default [
         name: "fishing",
         component: () => import("@/views/fishing/index.vue"),
         meta: {
+          title: "Fishing",
           showSearch: true,
         },
       },

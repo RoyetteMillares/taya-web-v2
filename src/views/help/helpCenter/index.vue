@@ -1,6 +1,6 @@
 <template>
   <div class="help-page">
-    <div class="help-title">{{t("help.title")}}</div>
+    <div class="help-title">{{t("help.title")}}dad</div>
     <div v-if="tyList.length > 0">
       <main-container
         class="helps"
@@ -22,11 +22,10 @@
             </div>
 
             <!-- <div class="help-box-btn" @click="goDetail(item.id)">{{t("help.seeAll")}}</div> -->
-            <div class="btn" @click="goDetail(item.id)">
+            <div class="btn" @click="goDetail(item.id, item.typeName)">
               <span>{{t("help.seeAll")}}</span>
               <svg-icon name="arrow_r"></svg-icon>
             </div>
-
           </div>
         </div>
       </main-container>
@@ -57,9 +56,9 @@ const getTypes = () => {
   help.HELPTYPES(payload);
 };
 
-const goDetail = (id) => {
+const goDetail = (id,title) => {
   localStorage.setItem("helpId", id);
-  router.push({ name: "helpDetail" });
+  router.push(`helpDetail/${title}`);
 };
 
 onMounted(() => {

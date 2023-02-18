@@ -13,4 +13,10 @@ const router = createRouter({
   },
 });
 
+//Add DYNAMIC PAGE TITLE 
+router.beforeEach((to, from, next) => {
+  document.title = `${to.meta.title}`;
+  next();
+})
+
 export default router;

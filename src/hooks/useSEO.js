@@ -2,30 +2,7 @@ import { useRouter } from "vue-router";
 import { effect } from "vue";
 import { metaIndex } from "./meta.js";
 import { metaSports } from "./meta.js";
-
-const nameMap = {
-  index: "Taya",
-  sports: "Taya - Sports",
-  about: "About - Page",
-  liveChat: "LiveChat - Page",
-  helpCenter: "Help Center Page",
-  helpDetail: "Help Detail",
-  commissionRules: "Commission Rules",
-  blog: "Blog - Page",
-  blogDetails: "Blog - Details",
-  searchData: "Search Data",
-  promote: "Promote",
-  promoteDetail: "Promo Details",
-  affiliate: "Affiliate",
-  vip: "Vip",
-  casino: "Casino",
-  live: "Live",
-  slots: "Slots",
-  turbo: "Turbo",
-  cockfight: "Cockfight",
-  fishing: "Fishing",
-  gameRoom: "Game Room",
-};
+import { metaHelpCenter } from "./meta.js";
 
 
 //Remove all the meta tags in the head tag
@@ -65,9 +42,11 @@ export default function useSEO() {
         head.insertBefore(element, head.firstChild);
       });
     }
-
-   
-    document.title = nameMap[router.currentRoute.value.name];
-    /*Prepare here the condition for the urls*/
+     if (router.currentRoute.value.name === "helpCenter") {
+       metaHelpCenter.forEach((meta) => {
+         const element = createMetaElement(meta);
+         head.insertBefore(element, head.firstChild);
+       });
+     }
   });
 }

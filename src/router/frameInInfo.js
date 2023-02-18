@@ -21,6 +21,7 @@ export default [
     name: "mine",
     redirect: { name: "profile" },
     meta: {
+      title: 'Profile',
       isAuth: true,
     },
     children: [
