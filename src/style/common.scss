@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "AvertaStd-Bold";
+  src: url("../assets/fonts/AvertaStd-Bold.ttf");
+}
+@font-face {
+  font-family: "AvertaStd-Regula";
+  src: url("../assets/fonts/AvertaStd-Regular.ttf");
+}
+
+html,
+body {
+  touch-action: manipulation;
+  height: 100%;
+  background: $main-bg-color;
+}
+
+html {
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  //font-family: Arial;
+  //background-color: #f8f8f8;
+}
+
+body {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  width: 100%;
+  background: #232a33;
+  height: 100%;
+  font-family: "AvertaStd-Regula";
+  //max-width: 1920px;
+}
+
+#app {
+  //height: 100%;
+  //position: relative;
+  background: $main-bg-color;
+  height: 100%;
+  //overflow: scroll;
+}
+.is-bold{
+  font-family: "AvertaStd-Bold";
+}
+.is-hand{
+  cursor: pointer;
+}
+* {
+  /*This prevents users being able to select text. Stops long presses in iOS bringing up copy/paste UI for example. Note below we specifically switch user-select on for inputs for the sake of Safari. Bug here: https://bugs.webkit.org/show_bug.cgi?id=82692*/
+  user-select: none;
+  /*This gets -webkit specific prefix as it is a non W3C property*/
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  /*Older Androids need this instead*/
+  -webkit-tap-highlight-color: transparent;
+  /* Most devs find border-box easier to reason about. However by inheriting we can mix box-sizing approaches.*/
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Switching user-select on for inputs and contenteditable specifically for Safari (see bug link above)*/
+input[type],
+[contenteditable] {
+  user-select: text;
+}
+
+/*Mozilla adds a dotted outline around a tags when they receive tab focus. This removes it. Be aware this is a backwards accessibilty step!*/
+a:focus {
+  outline: 0;
+}
+
+select {
+  outline: none;
+}
+
+input,
+fieldset {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  /*inputs and fieldset defaults to having a min-width equal to its content in Chrome and Firefox (https://code.google.com/p/chromium/issues/detail?id=560762), we may not want that*/
+  min-width: 0;
+  /*Reset the font size and family*/
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+}
+
+/* For IE, we want to remove the default cross ('X') that appears in input fields when a user starts typing - Make sure you add your own! */
+input::-ms-clear {
+  display: none;
+}
+
+/*This switches the default outline off when an input receives focus (really important for users tabbing through with a keyboard) so ensure you put something decent in for your input focus instead!!*/
+input:focus {
+  outline: 0;
+}
+
+input[type='number'] {
+  /*Mozilla shows the spinner UI on number inputs unless we use this:*/
+  -moz-appearance: textfield;
+}
+
+/*Removes the little spinner controls for number type inputs (WebKit browsers/forks only)*/
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+/*SVG defaults to inline display which I dislike*/
+svg {
+  display: inline-flex;
+}
+
+dl, ul, li {
+  list-style: none;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.text-left {
+  text-align: left
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.green-text {
+  color: #11B85A;
+}
+
+.padding20 {
+  padding: 20px;
+}
+
+.padding-top-bottom20 {
+  padding: 20px;
+}
+
+
+.pagination-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .el-pagination {
+    .el-pager {
+      .more, .number {
+        color: #8e99b6;
+        background: none;
+        font-size: 16px;
+        margin-right: 15px !important;
+      }
+
+      .is-active {
+        color: white;
+        border-radius: 50%;
+        background: #11b85a !important;
+      }
+    }
+    .btn-prev {
+      margin-right: 15px !important;
+    }
+
+    .btn-next, .btn-prev {
+      background: #11b85a !important;
+      border-radius: 4px;
+      display: inline-block;
+      color: white !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+  }
+}
+
+// :deep(.el-input__wrapper) {}
+//.el-input__wrapper {
+//  .el-input__inner {
+//    caret-color: red;
+//    caret-color: #ffffff;
+//    &:-webkit-autofill {
+//      -webkit-text-fill-color: #8e99b6 !important;
+//      box-shadow: 0 0 0px 1000px none inset !important;
+//    }
+//    &:-internal-autofill-previewed,
+//    &:-internal-autofill-selected {
+//      -webkit-text-fill-color: #8e99b6 !important;
+//      transition: background-color 5000s ease-out 0.5s;
+//    }
+//  }
+//}
+#betslip-container-element{
+  position: static !important;
+  #betslip-root-inner{
+    z-index: 100;
+  }
+}
+#application-container{
+  position: relative;
+}

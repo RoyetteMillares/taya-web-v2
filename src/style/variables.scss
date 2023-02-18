@@ -1,0 +1,56 @@
+
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+$colors: (
+    'primary': (
+      'base': #34B8D5,
+    ),
+    info:(
+    'base':#223136,
+    )
+  )
+);
+//var(--el-bg-color-overlay)
+$main-color:#34B8D5;
+$main-text-color:#B8D0D8;
+$main-text-dark-color: #585954;
+$main-border-bottom-color: #585954;
+$main-sub-bg:#0a2329;
+$main-bg-color: #061b20;
+$main-width:1350px;// 中间区域宽度
+$main-header-bg:#0a2329; // header bg
+$main-input-login-bg:#223136;
+$main-container-inner-bg:#112228;
+$main-title-bg:linear-gradient(90deg,#5fb5d2, rgba(95,181,210,0.00));
+$main-button-bg:linear-gradient(180deg,#bef1ff, #5fb5d2);
+$main-input-bg:#152227;
+:root{
+  //--el-fill-color-light
+  --el-bg-color-overlay:#182226;
+  --el-border-color-light:#1a212a;
+  --el-fill-color-light:#000;
+  --el-text-color-regular:#ddd;
+  --el-select-input-focus-border-color:#f00;
+  --el-input-bg-color:#223136;
+  --el-fill-color-blank:#223136;
+  --el-input-border-color:#223136;
+  --el-border-color:#223136;
+  --el-input-hover-border-color:$main-color ;
+  --theme-main-color:#34b8d5;
+  --theme-max-width:20rem;
+  --theme-bg-color:#061b20;
+  --theme-tab-color:#B6C0C3;
+  --theme-header-bg:#0a2329;
+  --theme-sub-color:#B8D0D8;
+}
+.el-input__wrapper{
+  --el-input-hover-border-color:#34B8D5 ;
+}
+.el-table{
+  --el-table-header-bg-color:$main-container-inner-bg;
+  --el-table-tr-bg-color:$main-container-inner-bg;
+  --el-table-border-color:#061b20;
+  --el-table-header-text-color:$main-text-color;
+  --el-table-text-color:#B6C0C3;
+  --el-table-bg-color:$main-container-inner-bg;
+  --el-table-row-hover-bg-color:$main-container-inner-bg；
+}

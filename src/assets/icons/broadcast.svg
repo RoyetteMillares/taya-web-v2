@@ -1,0 +1,10 @@
+<svg id="公告" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="icon_home_notice" data-name="icon/home/notice">
+    <rect id="矩形" width="19.894" height="19.894" fill="#d8d8d8" opacity="0"/>
+    <g id="形状结合">
+      <path id="矩形-2" data-name="矩形" d="M0,3.419H3.272L7.616,0H8.7V13.677H7.616L3.261,10.258H0Z" transform="translate(1.25 3.75)"  fill-rule="evenodd"/>
+      <path id="形状结合-2" data-name="形状结合" d="M14.619,14.881a6.24,6.24,0,0,0,0-8.834l1.119-1.119a7.821,7.821,0,0,1,0,11.072Z" />
+      <path id="形状结合-3" data-name="形状结合" d="M11.97,12.231a2.5,2.5,0,0,0,0-3.534l1.4-1.4a4.469,4.469,0,0,1,0,6.327Z" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+.layout-view {
+  //width: 1440px;
+  //margin: 0 auto;
+  //align-items: flex-start;
+
+  //overflow-y: scroll;
+  //padding-top: 60px;
+.main-layout{
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+  .section-left {
+    width: 200px;
+    min-height: 100vh;
+    margin-right: 30px;
+    //position: sticky;
+    //top: 0;
+    //left: 0;
+    //background: #232a33;
+    z-index: 10;
+  }
+  .section-right {
+    //width: 1206px;
+    min-height: 100%;
+    flex:1;
+    //flex-direction: column;
+  }
+}

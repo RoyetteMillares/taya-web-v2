@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Next_tier_reward" data-name="Next tier reward" transform="translate(-2 -2)">
+    <rect id="奖杯6-3_1" data-name="奖杯6-3 1" width="24" height="24" transform="translate(2 2)" fill="none"/>
+    <path id="Subtract" d="M8.165,24.5h0V17.382l.059.059a8.166,8.166,0,0,0,11.55,0l.059-.059V24.5L14,22.073,8.167,24.5Z" fill="#8e99b6"/>
+    <path id="Vector" d="M8.167,15.167a7,7,0,1,0-4.95-2.05,7,7,0,0,0,4.95,2.05Zm0,1.167a8.167,8.167,0,1,1,5.774-2.392,8.167,8.167,0,0,1-5.774,2.392Z" transform="translate(5.833 3.5)" fill="#8e99b6"/>
+    <path id="Vector-2" data-name="Vector" d="M.417.506,2.056,2.592a.233.233,0,0,0,.367,0L4.389.09a.233.233,0,0,1,.367,0l1.963,2.5a.233.233,0,0,0,.367,0L8.731.5a.234.234,0,0,1,.415.172L8.463,6.538H.684L0,.678A.233.233,0,0,1,.417.506Z" transform="translate(9.427 7.727)" fill="#11b85a"/>
+    <path id="Vector-3" data-name="Vector" d="M.371,0H7.406a.37.37,0,0,1,.371.371V.8a.371.371,0,0,1-.371.371H.371A.371.371,0,0,1,0,.8V.371A.37.37,0,0,1,.371,0Z" transform="translate(10.111 15.008)" fill="#91e1b4"/>
+  </g>
+</svg>
