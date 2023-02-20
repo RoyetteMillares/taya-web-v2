@@ -9,15 +9,13 @@ export function setLocalStorage(key, value) {
 
 
 export function getLocalStorage(key) {
-  let item = localStorage.getItem(key);
-  if (item) {
-    try {
-      JSON.parse(item)
-    } catch (e) {
-      return item;
-    }
+  const json = localStorage.getItem(key);
+  if (json) {
+    const output = JSON.parse(json);
+    return output;
   }
-  return item && JSON.parse(item);
+  localStorage.setItem(key, JSON.stringify({}));
+  return {};
 }
 
 export function removeLocalStorage(key) {
