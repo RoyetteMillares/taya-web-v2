@@ -221,7 +221,7 @@ const navChange = function (val) {
 const router = useRouter();
 const pageTo = (route, data) => {
   setLocalStorage("blogDetail", data);
-  router.push( `blog-detail/${route}` );
+ router.push( `blog-detail/${route}`.replaceAll(' ', '-').toLowerCase() );
 };
 
 onMounted(async () => {

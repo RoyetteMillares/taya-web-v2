@@ -29,24 +29,25 @@ export default function useSEO() {
     // create meta tags and append to head
     const head = document.getElementsByTagName("head")[0];
 
-    if (router.currentRoute.value.name === "index") {
+   switch (router.currentRoute.value.name) {
+     case "index":
        metaIndex.forEach((meta) => {
          const element = createMetaElement(meta);
          head.insertBefore(element, head.firstChild);
        });
-    }
-
-    if (router.currentRoute.value.name === "sports") {
-      metaSports.forEach((meta) => {
-        const element = createMetaElement(meta);
-        head.insertBefore(element, head.firstChild);
-      });
-    }
-     if (router.currentRoute.value.name === "helpCenter") {
+       break;
+     case "sports":
+       metaSports.forEach((meta) => {
+         const element = createMetaElement(meta);
+         head.insertBefore(element, head.firstChild);
+       });
+       break;
+     case "helpCenter":
        metaHelpCenter.forEach((meta) => {
          const element = createMetaElement(meta);
          head.insertBefore(element, head.firstChild);
        });
-     }
+       break;
+   }
   });
 }
