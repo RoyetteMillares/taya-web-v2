@@ -23,31 +23,42 @@ const RemoveMetaTag = () => {
 
 export default function useSEO() {
   const router = useRouter();
-  console.log(router.currentRoute.value.matched)
   effect(() => {
     RemoveMetaTag();
     // create meta tags and append to head
     const head = document.getElementsByTagName("head")[0];
 
-   switch (router.currentRoute.value.name) {
-     case "index":
-       metaIndex.forEach((meta) => {
-         const element = createMetaElement(meta);
-         head.insertBefore(element, head.firstChild);
-       });
-       break;
-     case "sports":
-       metaSports.forEach((meta) => {
-         const element = createMetaElement(meta);
-         head.insertBefore(element, head.firstChild);
-       });
-       break;
-     case "helpCenter":
-       metaHelpCenter.forEach((meta) => {
-         const element = createMetaElement(meta);
-         head.insertBefore(element, head.firstChild);
-       });
-       break;
-   }
+    switch (router.currentRoute.value.name) {
+      case "index":
+        metaIndex.forEach((meta) => {
+          const element = createMetaElement(meta);
+          head.insertBefore(element, head.firstChild);
+        });
+        break;
+      case "sports":
+        metaSports.forEach((meta) => {
+          const element = createMetaElement(meta);
+          head.insertBefore(element, head.firstChild);
+        });
+        break;
+      case "helpCenter":
+        metaHelpCenter.forEach((meta) => {
+          const element = createMetaElement(meta);
+          head.insertBefore(element, head.firstChild);
+        });
+        break;
+      case "blog":
+        metaBlog.forEach((meta) => {
+          const element = createMetaElement(meta);
+          head.insertBefore(element, head.firstChild);
+        });
+        break;
+      case "blog-detail":
+        metaBlogDetail.forEach((meta) => {
+          const element = createMetaElement(meta);
+          head.insertBefore(element, head.firstChild);
+        });
+        break;
+    }
   });
 }

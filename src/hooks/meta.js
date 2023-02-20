@@ -1,3 +1,6 @@
+import { getLocalStorage } from "@/utils/localstore-util.js";
+let detail = getLocalStorage("blogDetail");
+
 export const metaIndex = [
   {
     name: "robot",
@@ -292,7 +295,6 @@ export const metaHelpCenter = [
   },
 ];
 
-
 export const metaAbout = [
   {
     name: "robot",
@@ -574,6 +576,104 @@ export const metaBlog = [
   {
     itemprop: "name",
     content: "Title for Blog Page",
+  },
+  {
+    charset: "UTF-8",
+    "content-type": "text/html",
+  },
+  {
+    name: "viewport",
+    content:
+      "width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0",
+  },
+];
+
+export const metaBlogDetail = [
+  {
+    name: "robot",
+    content: "index,follow,archive",
+  },
+  {
+    property: "og:image",
+    content: "og image for Blog Details Page",
+  },
+  {
+    property: "og:description",
+    content: "og description for Blog Details Page",
+  },
+  {
+    property: "og:title",
+    content: detail.title,
+  },
+  {
+    property: "og:url",
+    content: "https://taya.ph/",
+  },
+  {
+    property: "og:type",
+    content: "website",
+  },
+  {
+    name: "twitter:title",
+    content: "detail.title",
+  },
+  {
+    name: "twitter:image",
+    content: "twitter image for Blog Details Page",
+  },
+  {
+    name: "twitter:description",
+    content: "twitter:description for Blog Details Page",
+  },
+  {
+    name: "twitter:card",
+    content: "summary_large_image for Blog Details Page",
+  },
+  {
+    name: "apple-mobile-web-app-capable",
+    content: "yes",
+  },
+  {
+    name: "apple-mobile-web-app-status-bar-style",
+    content: "black",
+  },
+  {
+    name: "format-detection",
+    content: "telephone=no, email=no",
+  },
+
+  {
+    itemprop: "description",
+    content: "description for Blog Details Page",
+  },
+  {
+    property: "og:site_name",
+    content: "og site name for Blog Details Page",
+  },
+  {
+    property: "og:image",
+    content: "sample for Blog Details Page",
+  },
+  {
+    itemprop: "image",
+    content: "image src for Blog Details Page",
+  },
+
+  {
+    name: "description",
+    content: "Meta Description for Blog Details Page",
+  },
+  {
+    name: "mobile-web-app-capable",
+    content: "yes",
+  },
+  {
+    name: "apple-mobile-web-app-capable",
+    content: "yes",
+  },
+  {
+    itemprop: "name",
+    content: detail.title,
   },
   {
     charset: "UTF-8",

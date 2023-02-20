@@ -6,7 +6,7 @@
         <p class="flex-box news-title mb-10">
           <span>{{ t('extra.current') }}:</span>
           <span @click="router.push({name:'blog'})" class="cursor">{{ t("blog.BlogNews") }} > </span>
-          <span class="news-actives">{{ t("blog.BlogDetail") }}</span>
+          <span class="news-actives">{{ t("blog.BlogDetail")}} / {{ detail.title  }}</span>
         </p>
         <div class="blog-detail-content">
           <h2>{{detail.title}}</h2>
